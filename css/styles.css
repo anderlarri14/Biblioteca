@@ -1,5 +1,5 @@
 h1{
-    font-family: Kings,cursive;
+    font-family: 'Kings',cursive;
 }
 
 a{
@@ -14,16 +14,16 @@ nav{
     align-items: center;
 }
 
-nav a,p{
+h2,nav a, nav p, footer a, footer p,i,li{
     color: white;
 }
 
-#logo-wrap{
+nav .logo-wrap{
     display: flex;
     align-items: center;
 }
 
-#logo{
+#header-logo{
     height: 100px;
     width: 100px;
     margin-right: 10px;
@@ -42,6 +42,7 @@ nav a,p{
 .enlace:not(:last-child){
     border-right: 1px solid #FFF;
 }
+
 #inicio-sesion{
     display: flex;
     flex-wrap: wrap;
@@ -50,4 +51,74 @@ nav a,p{
 
 #inicio-sesion p{
     width: 100%;
+    text-align: center;
 }
+
+#background{
+    position: relative;
+    
+}
+
+#background-image{
+    width: 100%;
+}
+
+.img-text{
+    color:white;
+    position: absolute;
+    font-family: 'Work Sans',sans-serif;
+    font-size: 70px;
+    top:400px;
+    left: 40px;
+}
+
+#autor{
+    text-align: end;
+}
+
+footer{
+    background-color: black;
+    padding: 0px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer div{
+    width: 30%;
+}
+
+footer .logo-wrap{
+    width: 15%;
+    height: 80%;
+    text-align: center;
+    border-right: 1px solid #FFF;
+}
+
+#footer-logo{
+    display: inline;
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+}
+
+.social-media{
+    width: 20%;
+}
+.social-media i{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #D8E2DC;
+    text-align: center;
+    line-height: 30px;
+    margin-left: 10px;
+}
+.social-media ul{
+    list-style-type: none;
+    display: flex;
+}
+
+
+
+
