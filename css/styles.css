@@ -1,0 +1,53 @@
+h1{
+    font-family: Kings,cursive;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav{
+    background-color: black;
+    padding: 0px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a,p{
+    color: white;
+}
+
+#logo-wrap{
+    display: flex;
+    align-items: center;
+}
+
+#logo{
+    height: 100px;
+    width: 100px;
+    margin-right: 10px;
+}
+
+#enlaces{
+    display: flex;
+    justify-content: space-around;
+}
+
+.enlace{
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.enlace:not(:last-child){
+    border-right: 1px solid #FFF;
+}
+#inicio-sesion{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#inicio-sesion p{
+    width: 100%;
+}
