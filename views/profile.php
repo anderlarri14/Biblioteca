@@ -16,7 +16,7 @@
         $perfil = simplexml_load_file('../data/users/' . $_SESSION['username'] . '.xml');
         echo('<h2> Mi perfil </h2>');
         echo('<div class="profile">');
-        echo('<img id="profile-pic" src="../public/profile.jpg" alt="Foto de perfil">');
+        echo('<img id="profile-pic" src="../public/profile.webp" alt="Foto de perfil">');
         echo('<div class="profile-info">');
         echo('<p id="user">Usuario: ' . $perfil->info->usuario . '</p>');
         echo('<p id="email">Email: ' . $perfil->info->email . '</p>');
@@ -24,7 +24,6 @@
         echo('</div>');
         echo('<h2>Lista de Libros</h2>');
         if(isset($perfil->libros->libro)){
-            echo('<p>Entramos en el if</p>');
             foreach($perfil->libros->libro as $libro){
             echo('<div class="libro">');
             echo('<img src="../public/portadas/' . $libro->foto . '" alt="Portada del libro" class="book-cover">' );
