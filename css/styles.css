@@ -29,17 +29,17 @@ nav .logo-wrap{
     margin-right: 10px;
 }
 
-#enlaces{
+#links{
     display: flex;
     justify-content: space-around;
 }
 
-.enlace{
+.link{
     padding-left: 7px;
     padding-right: 7px;
 }
 
-.enlace:not(:last-child){
+.link:not(:last-child){
     border-right: 1px solid #FFF;
 }
 
@@ -47,9 +47,10 @@ nav .logo-wrap{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    width: 35%;
 }
 
-#inicio-sesion p{
+#inicio-sesion h2,#inicio-sesion p{
     width: 100%;
     text-align: center;
 }
@@ -84,8 +85,16 @@ footer{
     align-items: center;
 }
 
+footer p{
+    text-align: justify;
+}
+
 footer div{
-    width: 30%;
+    width: 27%;
+}
+
+footer h2{
+    text-align: center;
 }
 
 footer .logo-wrap{
@@ -100,6 +109,16 @@ footer .logo-wrap{
     width: 100px;
     height: 100px;
     margin-top: 10px;
+}
+
+.contact ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact ul li{
+    width: 50%;
+    margin-bottom: 15px;
 }
 
 .social-media{
@@ -118,7 +137,5 @@ footer .logo-wrap{
     list-style-type: none;
     display: flex;
 }
-
-
 
 
