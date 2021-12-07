@@ -1,0 +1,56 @@
+h1{
+    font-family: 'Kings',cursive;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav{
+    background-color: black;
+    padding: 0px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h2,nav a, nav p, footer a, footer p,i,li{
+    color: white;
+}
+
+nav .logo-wrap{
+    display: flex;
+    align-items: center;
+}
+
+#header-logo{
+    height: 100px;
+    width: 100px;
+    margin-right: 10px;
+}
+
+#links{
+    display: flex;
+    justify-content: space-around;
+}
+
+.link{
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.link:not(:last-child){
+    border-right: 1px solid #FFF;
+}
+
+#inicio-sesion{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 35%;
+}
+
+#inicio-sesion h2,#inicio-sesion p{
+    width: 100%;
+    text-align: center;
+}

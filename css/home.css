@@ -1,0 +1,21 @@
+#background{
+    position: relative;
+    
+}
+
+#background-image{
+    width: 100%;
+}
+
+.img-text{
+    color:white;
+    position: absolute;
+    font-family: 'Work Sans',sans-serif;
+    font-size: 70px;
+    top:400px;
+    left: 40px;
+}
+
+#autor{
+    text-align: end;
+}
