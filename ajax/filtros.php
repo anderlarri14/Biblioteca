@@ -4,9 +4,14 @@
     $conexion = new conexion();
 
     $inputTitulo = $_POST['inputTitulo'];
+    $inputAutor = $_POST['inputAutor'];
+    $inputGenero = $_POST['inputGenero'];
+    $inputPrecio = $_POST['inputPrecio'];
 
 
-    $result = $conexion->query("SELECT * FROM `catalogo` WHERE titulo LIKE '%$inputTitulo%';");
+    $result = $conexion->query("SELECT * FROM `catalogo`
+                                WHERE titulo LIKE '%$inputTitulo%' AND autor LIKE '%$inputAutor%' AND genero LIKE '%$inputGenero%'
+                                ORDER BY precio $inputPrecio;");
 
     
     foreach ($result->fetchAll() as $libro) {

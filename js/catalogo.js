@@ -1,77 +1,38 @@
 $( document ).ready(function() {
-    
-
     $('#inputTitulo').keyup(function () {
-        var valor = $('#inputTitulo').val();
-        console.log("valor es "+ valor);
-
-        $.ajax({
-            url : '../../ajax/filtroTitulo.php',
-            data : { "inputTitulo" : valor },
-            type : 'POST',
-            success : function(data) {
-                
-                $('.listaLibros').html(data);
-                
-            },
-            error : function(error) {
-                console.log('Error' + error);
-            }
-        });
-        
+        peticionAjax();    
     });
-    $('inputAutor').keyup(function () {
-        var valor = $('#inputAutor').val();
-        
+    $('#inputAutor').keyup(function () {
+        peticionAjax();   
     });
-    $('inputGenero').keyup(function () {
-        var valor = $('#inputGenero').val();
-        
+    $('#inputGenero').keyup(function () {
+        peticionAjax();
     });
-
+    $('input[name=filtroPrecio]').click(function () {
+        peticionAjax();   
+    });
 });
 
-/*$(document).ready(function () {
-    // >>>>>>>>>>>>>>>>> INFO TEMPORAL COORDENADAS
-    $("body").mousemove(function (event) {
-        var m = $(".mapa");
-        var bodyX = event.pageX;
-        var bodyY = event.pageY;
-        var mapX = event.pageX - m.offset().left;
-        var mapY = event.pageY - m.offset().top;
-        var coord = "paginaX: " + bodyX + ", paginaY: " + bodyY + "-----  MapaX " + mapX + ", MapaY: " + mapY;
-        var mapHeight = m.innerHeight();
-        var mapWidth = m.innerWidth();
-        var datMapa = "Height: " + mapHeight + " Width: " + mapWidth;
-        var puntoX = parseFloat(mapX / mapWidth * 100).toFixed(2) + "%";
-        var puntoY = parseFloat(mapY / mapHeight * 100).toFixed(2) + "%";
-        var punto = "X: " + puntoX + " Y: " + puntoY;
-        $("header").html(coord + " <br>" + datMapa + "<br> " + punto);
-    }); 
-    $(function () {
-        $.datepicker.setDefaults({
-            beforeShowDay: $.datepicker.noWeekends,
-            showOn: "button",
-            buttonText: "Cambiar dia",
-            onClose: function(date){
-                escribirFecha(date);
+function peticionAjax() {
+    var titulo = $('#inputTitulo').val();
+    var autor = $('#inputAutor').val();
+    var genero = $('#inputGenero').val();
+    var precio = $('input[name=filtroPrecio]:checked').attr('id');
+    var data = {"inputTitulo" : titulo, "inputAutor" : autor, "inputGenero" : genero, "inputPrecio" : precio}
+    $.ajax({
+        url : '../../ajax/filtros.php',
+        data : data,
+        type : 'POST',
+        success : function(data) {
+            if(data == ""){
+                $('.listaLibros').html("<h1>No hay resultados</h1>");
+            } else {
+                $('.listaLibros').html(data);  
             }
-        }); 
-        $("#fecha").datepicker();
+            
+        },
+        error : function(error) {
+            console.log('Error' + error);
+        }
     });
- 
-
-
-    $(".aula").click(function(){
-        var id = $(this).attr("id");
-        var pos = id.indexOf("-")+1;
-        id = id.substr(pos);
-        $(".datos-aula").css("display","none");
-        $(".datos-aula-"+id).css("display","grid");
-
-    });
-
-});
-function escribirFecha(valor){
-    console.log(valor);
-}*/
+}

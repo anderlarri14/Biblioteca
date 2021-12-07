@@ -31,8 +31,8 @@
             </div>
             <div class="filtroPrecio">
                 <h4>Precio</h4>
-                <input type="radio" name="filtroPrecio" id="precioAscendente"><label for="filtroPrecio">Ascendente</label>
-                <input type="radio" name="filtroPrecio" id="precioDescendente"><label for="filtroPrecio">Descendente</label>
+                <input type="radio" name="filtroPrecio" id="ASC" checked><label for="filtroPrecio">Ascendente</label>
+                <input type="radio" name="filtroPrecio" id="DESC"><label for="filtroPrecio">Descendente</label>
             </div>
         </div>
         <div class="listaLibros">
