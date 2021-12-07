@@ -16,3 +16,59 @@
 .filtros input[type=text]{
     background-color: rgb(238, 238, 238);
 }
+
+.filtros>*:not(:first-child){
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.libro{
+    display: flex;
+    margin: 5% 10%;
+    border: 1px solid black;
+    background-color: #EEE;
+    position: relative;
+}
+
+.book-cover{
+    margin: 2%;
+    height: 300px;
+    width: 188.2px;
+}
+
+.title{
+    font-size: x-large;
+}
+
+.author{
+    position: absolute;
+    top:50px;
+    left: 250px;
+}
+
+.description{
+    position: absolute;
+    top:125px;
+    left: 250px;
+    margin-right: 50px;
+    text-align: justify;
+}
+
+.price{
+    font-size: 20px;
+    font-style: italic;
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+}

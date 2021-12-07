@@ -3,6 +3,29 @@ $( document ).ready(function() {
 
     $('#inputTitulo').keyup(function () {
         var valor = $('#inputTitulo').val();
+        console.log("valor es "+ valor);
+
+        $.ajax({
+            url : '../../ajax/filtroTitulo.php',
+            data : { "inputTitulo" : valor },
+            type : 'POST',
+            success : function(data) {
+                
+                $('.listaLibros').html(data);
+                
+            },
+            error : function(error) {
+                console.log('Error' + error);
+            }
+        });
+        
+    });
+    $('inputAutor').keyup(function () {
+        var valor = $('#inputAutor').val();
+        
+    });
+    $('inputGenero').keyup(function () {
+        var valor = $('#inputGenero').val();
         
     });
 

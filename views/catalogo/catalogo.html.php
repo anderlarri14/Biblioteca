@@ -10,7 +10,6 @@
     <script src="../../js/catalogo.js"></script>
     <title>Cat&aacutelogo</title>
 </head>
-
 <body>
     <?php
     //include_once "../include/header.html";
@@ -37,12 +36,25 @@
             </div>
         </div>
         <div class="listaLibros">
-        
-
+            <?php
+            
+            foreach ($listaLibros as $libro) {
+                echo '<div class="libro">
+                <img src="../public/portadas/libro1.webp" alt="Portada del libro" class="book-cover">
+                
+                <h3 class="title">' . $libro['titulo'] . '</h3>
+                <p class="author">' . $libro['autor'] . '</p>
+                <p class="description">
+                ' . $libro['descripcion'] . '
+                </p>
+                <p class="price">' . $libro['precio'] . ' $</p></div>';
+            }
+            
+            ?>
         </div>
     </div>
     <div id="footer">
-
+    
     </div>
 
 </body>
