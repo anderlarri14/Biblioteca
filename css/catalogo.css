@@ -1,0 +1,18 @@
+.content *{
+    border: 1px solid red;
+}
+.filtros{
+    display: grid;
+    grid-template-rows: auto; 
+    grid-template-columns: 25% 25% 25% 25%; 
+    grid-template-areas: "title title title title"
+                         "filt1 filt2 filt3 filt4";
+}
+.filtros>h1{
+   grid-area: title; 
+   text-align: center;
+}
+
+.filtros input[type=text]{
+    background-color: rgb(238, 238, 238);
+}
