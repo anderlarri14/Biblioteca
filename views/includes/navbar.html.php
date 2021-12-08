@@ -81,9 +81,6 @@
                        <input required type="password" id="ISContrasena">
                    </label>
                    <button id="regEnviarIS">Enviar</button>
-               </form>
-                   <button id="regEnviarIS">Enviar</button>
-               </form>
            </div>
        </div>
     </nav>

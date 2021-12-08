@@ -10,7 +10,8 @@ $(document).ready(function(){
 
 
 function comprobarLogin(){
-    if($("#navNombreUsuario").html()!=""){
+    console.log($("#navNombreUsuario").html().trim());
+    if($("#navNombreUsuario").html().trim()!=""){
         $("#navUsuario").css("display","grid");
     }else{
         $("#inicio-sesion").css("display","grid");
