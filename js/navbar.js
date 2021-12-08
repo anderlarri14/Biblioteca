@@ -3,16 +3,122 @@ $(document).ready(function(){
     comprobarLogin();
     interaccionPopUp();
     addNuevoUsuario();
+    botonComprar();
+    botonQuitarLibro();
     iniciarSesion();
     cerrarSesion();
 
 });
 
 
+function botonQuitarLibro(){
+    $("#libros").on("click",".quitarLibro",function(e){
+
+        var idLibroC = $(this).parent().attr("id")
+        var idLibro =  idLibroC.substr(3,idLibroC.length-1);
+        $.ajax({
+            url: "../../ajax/navbar_quitarLibroCesta.php",
+            data: {"id":idLibro},
+            type: "POST",
+            success: function (data) {
+                $("#"+idLibroC).remove();
+                $("#precioTotal").html("");
+                $("#numLibros").html(0);
+            },
+            errro: function (error) {
+                console.log("navbar_addLibroCesta.php ---->");
+                console.log(error);
+            }
+        });
+    })
+}
+
+function botonComprar(){
+    $("#botComprar").click(function(){
+        comprar();
+    });
+}
+function comprar(){
+    $.ajax({
+        url: "../../ajax/navbar_completarCompra.php",
+        type: "GET",
+        success: function (data) {
+            console.log(data);
+            notCorrecto("Compra realizada!");
+            sleep(1000).then(() => {
+                location.reload();
+            });
+        },
+        errro: function (error) {
+            console.log("navbar_addLibroCesta.php ---->");
+            console.log(error);
+        }
+    });
+}
+function sleep (time) {
+    return new Promise((resolve) => setTimeout(resolve, time));
+}
+function addLibroCesta(id){
+    $.ajax({
+        url: "../../ajax/navbar_addLibroCesta.php",
+        data: {"id":id},
+        type: "POST",
+        success: function (data) {
+            cargarLibrosCesta();
+            notCorrecto("Libro añadido!");
+        },
+        errro: function (error) {
+            console.log("navbar_addLibroCesta.php ---->");
+            console.log(error);
+        }
+    });
+}
+function cargarLibrosCesta(){
+    var libro;
+    $.ajax({
+        url: "../../ajax/navbar_getLibrosCesta.php",
+        type: "POST",
+        dataType: "json",
+        success: function (data) {
+            $("#libros").empty();
+            let cant = 0;
+            let total = 0;
+            let partes;
+            var precio;
+            if(typeof data == "object"){
+                data.forEach(libro => {
+                    precio = libro["precio"];
+                    libro = '<div class="libro" id="lId'+libro["id"]+'">\n' +
+                        '       <div class="tituloLibro">'+libro["titulo"]+'</div>\n' +
+                        '       <div class="autorLibro">'+libro["autor"]+'</div>\n' +
+                        '       <div class="precioLibro">'+libro["precio"]+'</div>\n' +
+                        '       <div class="quitarLibro">X</div>\n' +
+                        '   </div>';
+                    cant++;
+                    partes = precio.split(".");
+
+                    total += parseInt(partes[0])+parseInt(partes[1])/100;
+                    $("#libros").append(libro);
+                });
+                $("#numLibros").html(cant);
+
+                total = parseFloat(total).toFixed(2);
+                $("#precioTotal").html("Precio total : "+total+"$");
+            }
+
+
+        },
+        errro: function (error) {
+            console.log("navbar_addLibroCesta.php ---->");
+            console.log(error);
+        }
+    });
+}
+
 function comprobarLogin(){
-    console.log($("#navNombreUsuario").html().trim());
     if($("#navNombreUsuario").html().trim()!=""){
         $("#navUsuario").css("display","grid");
+        cargarLibrosCesta();
     }else{
         $("#inicio-sesion").css("display","grid");
     }

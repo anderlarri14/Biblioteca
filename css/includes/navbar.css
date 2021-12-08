@@ -14,6 +14,123 @@ nav{
     background-color: #1c1c1c;
     color:white;
 }
+#carrito{
+    position: relative;
+    height: 40px;
+    width: 40px;
+    background-image:url("../../public/carrito.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80% 80%;
+    background-color: #7f9f94;
+    border-radius:10px;
+
+}
+#carrito>#numLibros{
+    position:absolute;
+    bottom:-15%;
+    right:-15%;
+    width:20px;
+    height: 20px;
+    background-color:crimson;
+    color:white;
+    border-radius:50%;
+    display: grid;
+    align-items: center;
+    justify-items:center;
+    z-index:10;
+}
+#carrito:hover #listado {
+    display:grid;
+    animation-name: aparecerCarrito;
+    animation-duration: 0.5s;
+}
+
+@keyframes aparecerCarrito {
+    0%   {opacity:0;}
+    100% {opacity:1;}
+}
+#carrito>#listado{
+    position:absolute;
+    top:100%;
+    right:0;
+    background-color:white;
+    width:500px;
+    border:3px solid #7f9f94;
+    z-index:2;
+    display:none;
+    grid-auto-flow:row;
+    grid-template-rows: 1fr 50px auto;
+    box-shadow:1px 1px 5px black;
+    padding:10px 20px;
+    padding-top:30px;
+    grid-gap:10px;
+    overflow-Y:hidden;
+}
+.tituloLibro{
+    grid-area: titulo;
+    overflow:hidden;
+
+}
+.autorLibro{
+    grid-area:autor;
+}
+.quitarLibro{
+    grid-area:cerrar;
+    text-align:right;
+    color:rgb(237 20 61 / 33%);
+    cursor:pointer;
+}
+.quitarLibro:hover{
+    color:crimson;
+}
+.autorLibro,.precioLibro{
+    font-size:0.8em;
+    color:#9d9d9d;
+}
+.precioLibro{
+    grid-area:precio;
+    text-align:right;
+}
+#libros{
+    color:black;
+    display:grid;
+    grid-auto-flow:row;
+    grid-gap:20px;
+}
+
+.libro{
+    border-bottom:1px solid rgb(237 20 61 / 33%);
+    display:grid;
+    grid-template-columns: 1fr 30px;
+    grid-template-areas:
+    "titulo cerrar"
+    "autor  precio";
+
+}
+
+#precioTotal{
+    color:black;
+
+    padding-top:5px;
+}
+#contBotComprar{
+    display:grid;
+    justify-content:right;
+}
+#botComprar{
+    color:#7f9f94;
+    border:1px solid #7f9f94;
+    padding:10px;
+    border-radius:10px;
+    cursor:pointer;
+    box-shadow:2px 2px 2px black;
+}
+#botComprar:hover{
+    transform:translate(1px, 1px);
+    box-shadow:1px 1px 1px black;
+}
+
 
 nav>a{
     position: relative;
@@ -109,7 +226,7 @@ nav>a>p{
 }
 
 .popTitulo{
-    font-weigh:bold;
+    font-weight:bold;
     font-size:2.5em !important;
     text-align:center;
     text-shadow:1px 1px 1px black;

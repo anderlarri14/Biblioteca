@@ -23,6 +23,20 @@
         </div>
 
         <div id="navUsuario">
+            <div id="carrito">
+                <div id="numLibros">0</div>
+                <div id="listado">
+                    <div id="libros">
+                        No hay ningun libro añadido
+                    </div>
+                    <div id="precioTotal">
+
+                    </div>
+                    <div id="contBotComprar">
+                        <div id="botComprar">Comprar</div>
+                    </div>
+                </div>
+            </div>
             <img alt="Imagen de perfil del usuario en navegador" src="../../public/profile.webp">
             <p id="navNombreUsuario"><?php
                 session_start();

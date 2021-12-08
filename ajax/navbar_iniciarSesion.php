@@ -5,6 +5,7 @@
             session_start();
             $_SESSION["idUsuario"] = getIdUsuario($userPath);
             $_SESSION["usuario"] = $_POST["usuario"];
+            $_SESSION["carrito"] = array();
             echo "OK";
         }else{
             echo "Usuario o Contraseña Incorrectos";
