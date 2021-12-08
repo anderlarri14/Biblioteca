@@ -1,7 +1,7 @@
 <?php
     
     session_start();
-    $_SESSION['username'] = 'hidalgo';
+    //$_SESSION['username'] = 'hidalgo';
     if (isset($_SESSION['username'])){
         $perfil = simplexml_load_file('../../data/users/' . $_SESSION['username'] . '.xml');
         include_once('../includes/navbar.html.php');

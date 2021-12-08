@@ -1,5 +1,5 @@
-<?php
-    echo '<footer>
+
+<footer>
     <div class="logo-wrap">
         <a href="index.html">
             <img src="../../public/footer-logo.webp" alt="Logo Libreria" id="footer-logo">
@@ -27,6 +27,6 @@
             <li><a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a></li>
         </ul>
     </div>
-</footer>';
+</footer>
 
-?>
+

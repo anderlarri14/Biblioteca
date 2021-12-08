@@ -1,19 +1,37 @@
-#background{
-    position: relative;
-    
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-#background-image{
-    width: 100%;
+body{
+    display:grid;
+    grid-auto-flow: row;
+    grid-template-rows: 100px 1fr auto;
+    position: absolute;
+    overflow: hidden;
+    height: 100%;
+    align-content: center;
+}
+#background{
+    position: relative;
+    background-image: url('../public/background.webp');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding:  3em 5em ;
+    display: grid;
+    align-content: end;
+    justify-content: start;
 }
 
 .img-text{
-    color:white;
+/*
     position: absolute;
-    font-family: 'Work Sans',sans-serif;
-    font-size: 70px;
     top:400px;
-    left: 40px;
+    left: 40px;*/
+    color:white;
+    font-size: 2.5em;
+    font-family: 'Work Sans',sans-serif;
 }
 
 #autor{
