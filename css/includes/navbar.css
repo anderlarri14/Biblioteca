@@ -50,7 +50,7 @@ nav>a>p{
     color:#e7e4be;
 }
 #inicio-sesion{
-    display: grid;
+    display: none;
     grid-auto-flow: column;
     align-items: center;
     justify-items: center;
@@ -67,7 +67,7 @@ nav>a>p{
 }
 #navUsuario{
     color:white;
-    display:grid;
+    display:none;
     grid-auto-flow:column;
     align-items:center;
     grid-gap:10px;

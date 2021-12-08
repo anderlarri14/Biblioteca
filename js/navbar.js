@@ -1,11 +1,21 @@
 $(document).ready(function(){
     noEnviarForms();
+    comprobarLogin();
     interaccionPopUp();
     addNuevoUsuario();
     iniciarSesion();
     cerrarSesion();
 
 });
+
+
+function comprobarLogin(){
+    if($("#navNombreUsuario").html()!=""){
+        $("#navUsuario").css("display","grid");
+    }else{
+        $("#inicio-sesion").css("display","grid");
+    }
+}
 
 
 function noEnviarForms(){
@@ -16,7 +26,17 @@ function noEnviarForms(){
         e.preventDefault();
     });
 }
+function mostrarOpciones(){
+    $("#inicio-sesion").css("display","grid");
+    $("#navUsuario").css("display","none");
+}
 
+function mostrarUsuario(usuario){
+    console.log(usuario);
+    $("#inicio-sesion").css("display","none");
+    $("#navUsuario").css("display","grid");
+    $("#navNombreUsuario").html(usuario);
+}
 
 function interaccionPopUp(){
     cerrarPopUp();
@@ -47,6 +67,9 @@ function cerrarPopUp(){
         e.stopPropagation();
     });
 }
+function ocultarPopUp(){
+    $("#pop").css("display","none");
+}
 
 function iniciarSesion(){
     $("#regEnviarIS").click(function () {
@@ -64,6 +87,8 @@ function iniciarSesion(){
             success: function (data) {
                 if(data=="OK"){
                     notCorrecto("Sesion Iniciada!")
+                    mostrarUsuario(usuario.usuario);
+                    ocultarPopUp();
                 } else{
                     notError(data);
                 }
@@ -103,7 +128,9 @@ function addNuevoUsuario() {
             type: "POST",
             success: function (data) {
                 if(data=="OK"){
-                    notCorrecto("Usuario Creado correctamente!")
+                    notCorrecto("Usuario Creado correctamente!");
+                    mostrarUsuario(usuario.usuario);
+                    ocultarPopUp();
                 } else{
                     notError(data);
                 }
@@ -117,13 +144,14 @@ function addNuevoUsuario() {
 }
 
 function cerrarSesion(){
-    $("#botCerrarSesion").click(function () {
+    $("#botCerrarSesion").on("click",function () {
         $.ajax({
             url: "../../ajax/navbar_cerrarSesion.php",
             type: "GET",
             success: function (data) {
                 if(data=="OK"){
                     notCorrecto("Sesion Cerrada Correctamente!")
+                    mostrarOpciones();
                 } else{
                     notError(data);
                 }

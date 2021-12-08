@@ -17,28 +17,24 @@
             <a href="../profile" class="link">PERFIL</a>
         </div>
 
-       <?php
-       session_start();
-            if(!isset($_SESSION["usuario"])){
-
-       ?>
         <div id="inicio-sesion">
             <div id="botIniciarSesion">Iniciar Sesion</div>
             <div id="botRegistro">Registrarse</div>
         </div>
-       <?php
-            } else{
 
-       ?>
         <div id="navUsuario">
             <img alt="Imagen de perfil del usuario en navegador" src="../../public/profile.webp">
-            <p><?php echo $_SESSION["usuario"];?></p>
+            <p id="navNombreUsuario"><?php
+                session_start();
+                if(isset($_SESSION["usuario"])){
+                    echo $_SESSION["usuario"];
+                }
+            ?>
+            </p>
             <div id="botCerrarSesion">Cerrar Sesion</div>
         </div>
 
-       <?php
-            }
-       ?>
+
        <div id="pop">
            <div id="popMain">
                <form id="popRegistro">
