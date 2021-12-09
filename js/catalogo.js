@@ -11,6 +11,11 @@ $( document ).ready(function() {
     $('input[name=filtroPrecio]').click(function () {
         peticionAjax();   
     });
+
+    $('.comprarLibro').click(function () {
+        var idLibro = $(this).attr('id');
+        addLibroCesta(idLibro);
+    });
 });
 
 function peticionAjax() {

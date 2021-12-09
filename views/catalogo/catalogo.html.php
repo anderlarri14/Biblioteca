@@ -5,14 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php
+    include_once "../includes/navbarDEP.php";
+    ?>
     <link rel="stylesheet" href="../../css/catalogo.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="../../js/catalogo.js"></script>
     <title>Cat&aacutelogo</title>
 </head>
 <body>
     <?php
-    //include_once "../include/header.html";
+    include_once "../includes/navbar.html.php";
     ?>
     <div class="content">
         <div class="filtros">
@@ -40,13 +42,12 @@
             
             foreach ($listaLibros as $libro) {
                 echo '<div class="libro">
-                <img src="../public/portadas/libro1.webp" alt="Portada del libro" class="book-cover">
+                <img src="../public/portadas/libro' . $libro['id'] . '.webp" alt="Portada del libro" class="book-cover">
                 
                 <h3 class="title">' . $libro['titulo'] . '</h3>
                 <p class="author">' . $libro['autor'] . '</p>
-                <p class="description">
-                ' . $libro['descripcion'] . '
-                </p>
+                <p class="description">' . $libro['descripcion'] . '</p>
+                <input type="button" value="Comprar" class="comprarLibro" id="' . $libro['id'] .'" ></input>
                 <p class="price">' . $libro['precio'] . ' $</p></div>';
             }
             

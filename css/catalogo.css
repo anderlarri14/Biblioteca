@@ -24,15 +24,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
 .libro{
     display: flex;
     margin: 5% 10%;
@@ -71,4 +62,10 @@
     position: absolute;
     bottom: 0;
     right: 30px;
+}
+
+.comprarLibro{
+    height: 40px;
+    width: 60px;
+    
 }
