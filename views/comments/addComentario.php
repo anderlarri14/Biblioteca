@@ -14,11 +14,11 @@ include_once('../includes/navbar.html.php');
 ?>
 
 <br>
-<div class="añadirComentario">
+<div class="addComentario">
     <div class="header-formulario">
         <p>AÑADIR COMENTARIO</p>
     </div>
-    <form action="guardarComentario.php" onsubmit="return verify()" method="post">
+    <form id="formAddComentario" action="guardarComentario.php" onsubmit="return verify()" method="post">
         <br>
         <input type="text" name="nombre"   id="nombre"  placeholder="Username*">
         <textarea id="comentario" name="comentario"  rows="4" cols="50"  placeholder="Add comment*"></textarea>

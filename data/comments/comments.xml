@@ -1,29 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE comentarios SYSTEM "comments.dtd">
-<comentarios ult_id="comentario4">
-    <comentario id="comentario0">
-        <fecha>2011/09/14 12:34</fecha>
-        <nombre>Ametz</nombre>
-        <texto>Hola mundo!</texto>
-    </comentario>
-    <comentario id="comentario1">
-        <fecha>2011/09/14 17:48</fecha>
-        <nombre>Asier</nombre>
-        <texto>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ipsam nostrum voluptatem corporis officia eos id nihil, fugiat beatae optio veniam. Officiis eius quis ad, sequi tempore, quaerat iure blanditiis non sit molestiae veniam harum dolorum dolorem odio. Impedit, laborum quae!</texto>
-    </comentario>
-    <comentario id="comentario2">
-        <fecha>2021/11/13 21:12</fecha>
-        <nombre>Iker</nombre>
-        <texto>okey, comment</texto>
-    </comentario>
-    <comentario id="comentario3">
-        <fecha>2021/11/13 21:14</fecha>
-        <nombre>Blai</nombre>
-        <texto>M'agrada el pa amb tomàquet </texto>
-    </comentario>
-    <comentario id="comentario4">
-        <fecha>2021/11/15 09:56</fecha>
-        <nombre>Alvaroooo</nombre>
-        <texto>Comentario de Alvaro</texto>
-    </comentario>
-</comentarios>
+<comentarios ult_id="comentario5">
+
+<comentario id="comentario5"><fecha>2021/12/09 21:49</fecha><nombre>Cristian</nombre><texto>No hayq ue cambiar</texto></comentario></comentarios>

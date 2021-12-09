@@ -1,5 +1,7 @@
 body{
-    background: #D3E4CD;
+
+    background-image: url("../public/background.webp");
+    background-repeat: repeat;
 
 }
 
@@ -8,8 +10,10 @@ body{
     width: 50%;
     margin-bottom: 5%;
     padding: 5px;
-    border: 1px solid #99A799;
+    border: 1px solid #81a398;
     border-radius: 5px;
+    background-color:white;
+    box-shadow:1px 1px 5px black;
 
 }
 
@@ -29,7 +33,7 @@ body{
     margin: 10px;
 }
 
-.añadirComentario{
+.addComentario{
     background: #99A799;
     display: flex;
     flex-wrap: wrap;
@@ -54,7 +58,7 @@ body{
 }
 
 .header-formulario{
-    background-color: #99A799;
+    background-color: #77988d;
     width: 100%;
     align-items: center;
     font-size: xx-large;
@@ -67,8 +71,9 @@ body{
     font-family: Helvetica, serif;
 }
 
-form{
-    background: #D3E4CD;
+#formAddComentario{
+    background: rgba(255,255,255,0.6);
+    box-shadow:1px 1px 5px black;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -76,8 +81,8 @@ form{
     font-size: x-large;
 }
 
-form *{
-    background: #D3E4CD;
+#formAddComentario *{
+    background: white;
     width: 95%;
     margin: 4%;
     font-size: x-large;
