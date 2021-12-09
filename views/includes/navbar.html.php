@@ -12,9 +12,8 @@
         <div id="links">
             <a href="../home" class="link">INICIO</a>
             <a href="" class="link">CATALOGO</a>
-            <a href="" class="link">COMPRAR</a>
             <a href="" class="link">COMENTARIOS</a>
-            <a href="../profile" class="link">PERFIL</a>
+            <a href="../profile" class="link link-perfil">PERFIL</a>
         </div>
 
         <div id="inicio-sesion">
@@ -95,6 +94,7 @@
                        <input required type="password" id="ISContrasena">
                    </label>
                    <button id="regEnviarIS">Enviar</button>
+               </form>
            </div>
        </div>
     </nav>

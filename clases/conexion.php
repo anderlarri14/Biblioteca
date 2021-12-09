@@ -1,10 +1,10 @@
 <?php
 class conexion
 {
-    private $servidor = "localhost";
-    private $base = "biblioteca";
-    private $usuario = "root";
-    private $contraseña = "";
+    private $servidor = "185.11.204.104";
+    private $base = "alzowxrz_libreria";
+    private $usuario = "alzowxrz_user";
+    private $contraseña = "Usuario123.";
     private $pdo;
 
     public function __construct()

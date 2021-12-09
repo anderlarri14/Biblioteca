@@ -118,6 +118,7 @@ function cargarLibrosCesta(){
 function comprobarLogin(){
     if($("#navNombreUsuario").html().trim()!=""){
         $("#navUsuario").css("display","grid");
+        $(".link-perfil").css("display","grid");
         cargarLibrosCesta();
     }else{
         $("#inicio-sesion").css("display","grid");
@@ -196,6 +197,8 @@ function iniciarSesion(){
                     notCorrecto("Sesion Iniciada!")
                     mostrarUsuario(usuario.usuario);
                     ocultarPopUp();
+                    $(".link-perfil").css("display","grid");
+
                 } else{
                     notError(data);
                 }
@@ -259,6 +262,8 @@ function cerrarSesion(){
                 if(data=="OK"){
                     notCorrecto("Sesion Cerrada Correctamente!")
                     mostrarOpciones();
+                    $(".link-perfil").css("display","none");
+
                 } else{
                     notError(data);
                 }
