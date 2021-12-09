@@ -16,9 +16,9 @@
     <title>Perfil</title>
 </head>
 <body>
-
     <?php
     include_once('../includes/navbar.html.php');
+        echo '<div>';
         echo('<h2> Mi perfil </h2>');
         echo('<div class="profile">');
         echo('<img id="profile-pic" src="../../public/profile.webp" alt="Foto de perfil">');
@@ -30,9 +30,9 @@
         echo('</div>');
         echo('</div>');
         echo('<h2>Lista de Libros</h2>');
-        if(true){
+        if(sizeof($libros) > 0){
             foreach($libros as $libro){
-            echo('<div class="libro">');
+            echo('<div class="libroPerfil">');
             echo('<img src="../../public/portadas/' . $libro["id_libro"] . '.jpg" alt="Portada del libro" class="book-cover">' );
             echo('<div><p class="title">' . $libro["titulo"] .'</p>');
             echo('<p class="author">' . $libro["autor"] . '</p>');
@@ -42,9 +42,10 @@
             }
         }
         else{
-            echo('<p id ="empty">Ooops, todavía no tienes ningun libro.<br>');
-            echo('Echa un vistazo a nuestro <a href="">Catalogo</a></p>');
+            echo('<div class="emptyDad"><p id ="empty">Ooops, todavía no tienes ningún libro.<br>');
+            echo('Echa un vistazo a nuestro <a href="../catalogo">Catálogo</a></p></div>');
         }
+        echo '</div>';
     include_once('../includes/footer.html.php');
     ?>
 </body>
