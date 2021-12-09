@@ -1,5 +1,15 @@
-.content *{
-    border: 1px solid red;
+body{
+    display:grid;
+    position:absolute;
+    height:100%;
+    width:100%;
+    grid-template-rows: 100px 1fr auto;
+}
+
+.content{
+    display:grid;
+    grid-auto-flow:row;
+    grid-template-rows: 100px 1fr;
 }
 .filtros{
     display: grid;
@@ -7,6 +17,7 @@
     grid-template-columns: 25% 25% 25% 25%; 
     grid-template-areas: "title title title title"
                          "filt1 filt2 filt3 filt4";
+    background-color: #575757;
 }
 .filtros>h1{
    grid-area: title; 
@@ -23,16 +34,69 @@
 
 
 
+.listaLibros{
+    background-image: url("../public/background.webp");
+    background-repeat: repeat;
+
+}
+.libro{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    margin: 5% 10%;
+    background-color: rgb(172, 172, 172);
+    border-radius: 5px;
+}
+.book-cover{
+    justify-self: center;
+    height: 300px;
+    width: 188.2px;
+}
+
+.informacion{
+    display: grid;
+    grid-template-rows: 25% 50% 25%;
+}
+
+.contTitulo{
+    height: 100%;
+    width: 100%;
+}
+.title{
+    font-size: x-large;
+}
+.descripcion{
+    height: 100%;
+    width: 100%;
+}
+.contCompra{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    
+}
+.notResult{
+    display: grid;
+    margin-top: 100px;
+    margin-left: 40%;
+    text-align: center;
+    width: 300px;
+    height: 150px;
+    background-color: rgb(253, 107, 107);
+    border-radius: 50px;
+}
+.notResult>h1{
+    align-self: center;
+    color: black;
+}
+.contCompra input[type=button]{
+    background-color: rgb(238, 238, 238);
+    border-radius: 50px;
+}
 
 
 
 
-
-
-
-
-
-
+/*
 .libro{
     display: flex;
     margin: 5% 10%;
@@ -40,7 +104,6 @@
     background-color: #EEE;
     position: relative;
 }
-
 .book-cover{
     margin: 2%;
     height: 300px;
@@ -72,3 +135,10 @@
     bottom: 0;
     right: 30px;
 }
+
+.comprarLibro{
+    height: 40px;
+    width: 60px;
+    
+}
+*/

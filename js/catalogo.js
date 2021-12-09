@@ -11,6 +11,11 @@ $( document ).ready(function() {
     $('input[name=filtroPrecio]').click(function () {
         peticionAjax();   
     });
+
+    $('.comprarLibro').click(function () {
+        var idLibro = $(this).attr('id');
+        addLibroCesta(idLibro);
+    });
 });
 
 function peticionAjax() {
@@ -25,7 +30,7 @@ function peticionAjax() {
         type : 'POST',
         success : function(data) {
             if(data == ""){
-                $('.listaLibros').html("<h1>No hay resultados</h1>");
+                $('.listaLibros').html("<div class=\"notResult\"><h1>No hay resultados</h1></div>");
             } else {
                 $('.listaLibros').html(data);  
             }
