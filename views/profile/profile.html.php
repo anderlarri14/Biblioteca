@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kings&family=Work+Sans:ital,wght@1,600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/6c41c17d75.js" crossorigin="anonymous"></script>
+    <?php include_once("../../includes/navbarDEP.php"); ?>
     <title>Perfil</title>
 </head>
 <body>
@@ -20,13 +21,15 @@
         echo('<div class="profile">');
         echo('<img id="profile-pic" src="../../public/profile.webp" alt="Foto de perfil">');
         echo('<div class="profile-info">');
-        echo('<p id="user">Usuario: ' . $perfil->info->usuario . '</p>');
-        echo('<p id="email">Email: ' . $perfil->info->email . '</p>');
+        echo('<p id="user">Usuario: ' . $user->usuario . '</p>');
+        echo('<p id="user">Nombre: ' . $user->nombre . '</p>');
+        echo('<p id="user">Apellido: ' . $user->apellido . '</p>');
+        echo('<p id="email">Email: ' . $user->email . '</p>');
         echo('</div>');
         echo('</div>');
         echo('<h2>Lista de Libros</h2>');
-        if(isset($perfil->libros->libro)){
-            foreach($perfil->libros->libro as $libro){
+        if(true){
+            foreach($libros as $libro){
             echo('<div class="libro">');
             echo('<img src="../../public/portadas/' . $libro->foto . '" alt="Portada del libro" class="book-cover">' );
             echo('<h3 class="title">' . $libro->titulo .'</h3>');
