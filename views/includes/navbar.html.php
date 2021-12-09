@@ -7,9 +7,12 @@
         <div id="links">
             <a href="../home" class="link">INICIO</a>
 
+
             <a href="../catalogo" class="link">CATALOGO</a>
             <a href="" class="link">COMENTARIOS</a>
+            <a href="../comments/listComentarios.php" class="link">COMENTARIOS</a>
             <a href="../profile" class="link link-perfil">PERFIL</a>
+
         </div>
 
         <div id="inicio-sesion">
@@ -52,32 +55,32 @@
                    <div class="popTitulo">Nuevo Registro</div>
                    <label>
                        <p>Usuario</p>
-                       <input required type="text" id="regUsuario">
+                       <input type="text" id="regUsuario">
                    </label>
                    <label>
                        <p>Nombre</p>
-                       <input required type="text" id="regNombre">
+                       <input type="text" id="regNombre">
                    </label>
                    <label>
                        <p>Apellido</p>
-                       <input required type="text" id="regApellido">
+                       <input type="text" id="regApellido">
                    </label>
                    <label>
                        <p>Fecha de nacimiento</p>
-                       <input required type="date" min='1899-01-01' max='2021-12-09' id="regNacimiento" >
+                       <input type="date" min='1899-01-01' max='2021-12-09' id="regNacimiento" >
                    </label>
                    <label>
                         <p>Email</p>
-                       <input required type="text" id="regEmail">
+                       <input type="text" id="regEmail">
                    </label>
                    <label>
                         <p>Repetir Email</p>
-<!--                       <input required type="text" onpaste="return false;" autocomplete="nope" id="regREmail">-->
-                       <input required type="text" id="regREmail">
+<!--                       <input type="text" onpaste="return false;" autocomplete="nope" id="regREmail">-->
+                       <input type="text" id="regREmail">
                    </label>
                    <label>
                         <p>Contraseña</p>
-                       <input required type="password"  id="regContrasena">
+                       <input type="password"  id="regContrasena">
                    </label>
                    <button id="regEnviarR">Enviar</button>
                </form>
@@ -85,11 +88,11 @@
                    <div class="popTitulo">Iniciar Sesion</div>
                    <label>
                        <p>Usuario</p>
-                       <input required type="text" id="ISUsuario">
+                       <input type="text" id="ISUsuario">
                    </label>
                    <label>
                        <p>Contraseña</p>
-                       <input required type="password" id="ISContrasena">
+                       <input type="password" id="ISContrasena">
                    </label>
                    <button id="regEnviarIS">Enviar</button>
                </form>
