@@ -14,6 +14,7 @@ $( document ).ready(function() {
 
     $('.comprarLibro').click(function () {
         var idLibro = $(this).attr('id');
+        $(this).remove();
         addLibroCesta(idLibro);
     });
 });

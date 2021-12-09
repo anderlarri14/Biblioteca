@@ -68,7 +68,7 @@ body{
     justify-items:center;
 
 }
-.libro{
+.listaLibros>.libro{
     display: grid;
     grid-template-columns: 30% 70%;
     padding:20px;
@@ -125,8 +125,8 @@ body{
 }
 .contCompra input[type=button]{
     background-color: rgb(238, 238, 238);
-    border-radius: 50px;
-}
+    cursor:pointer;
 
+}
 
 
