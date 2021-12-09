@@ -8,8 +8,6 @@
             <a href="../home" class="link">INICIO</a>
 
             <a href="../catalogo" class="link">CATALOGO</a>
-            <a href="" class="link">COMPRAR</a>
-
             <a href="" class="link">COMENTARIOS</a>
             <a href="../profile" class="link link-perfil">PERFIL</a>
         </div>
@@ -36,7 +34,9 @@
             </div>
             <img alt="Imagen de perfil del usuario en navegador" src="../../public/profile.webp">
             <p id="navNombreUsuario"><?php
-                session_start();
+                if(!isset($_SESSION["usuario"])){
+                    session_start();
+                }
                 if(isset($_SESSION["usuario"])){
                     echo $_SESSION["usuario"];
                 }
