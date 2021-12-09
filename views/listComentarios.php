@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Añadir comentarios</title>
     <link rel="stylesheet" href="../css/styles.css">
-    <script src="../js/script.js"></script>
+    <title>Consultar Comentarios</title>
 </head>
 <body>
 
@@ -32,14 +31,26 @@
         </div>
     </nav>
 
+    <a href="addComentario.html" class="btn-flotante">Añadir comentario</a>
+
 <br>
-<div class="añadirComentario">
-    <form action="guardarComentario.php" onsubmit="return verify()" method="post">
-        <br>
-        <input type="text" name="nombre"  id="nombre"  placeholder="Username*">
-        <textarea id="comentario" name="comentario" rows="4" cols="50"  placeholder="Add comment*"></textarea>
-        <input type="submit" value="Enviar">
-    </form>
-</div>
+
+    <?php
+    $comentarios = simplexml_load_file("../data/comments.xml");
+    foreach($comentarios->comentario as $comentario){
+        echo('<div class="comentario">');
+        echo('<div class="header-comentario">');
+        echo('<p>' . $comentario->fecha . '</p>');
+        echo('<h2>' . $comentario->nombre . '</h2>');
+        echo('</div>');
+        echo('<div class="texto-comentario">');
+        echo('<p>' . $comentario->texto . '</p>');
+        echo('</div>');
+        echo('</div>');
+    }
+    ?>
+
+
+
 </body>
 </html>
