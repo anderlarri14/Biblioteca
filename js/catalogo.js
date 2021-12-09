@@ -12,11 +12,12 @@ $( document ).ready(function() {
         peticionAjax();   
     });
 
-    $('.comprarLibro').click(function () {
+    $(".listaLibros").on("click",".comprarLibro",function(){
         var idLibro = $(this).attr('id');
         $(this).remove();
         addLibroCesta(idLibro);
     });
+
 });
 
 function peticionAjax() {

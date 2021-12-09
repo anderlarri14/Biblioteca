@@ -17,7 +17,7 @@
     foreach ($result->fetchAll() as $libro) {
         echo '
                 <div class="libro">
-                    <img src="../../public/portadas/libro' . $libro['id'] . '.webp" alt="Portada del libro" class="book-cover">
+                    <img src="../../public/portadas/' . $libro['id'] . '.jpg" alt="Portada del libro" class="book-cover">
                     <div class="informacion">
                         <div class="contTitulo">
                             <h3 class="title">' . $libro['titulo'] . '</h3>
