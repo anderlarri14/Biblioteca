@@ -15,8 +15,10 @@ body{
 
 .header-comentario{
     background-color: #99A799;
+    align-content: center;
     display: flex;
     align-items: center;
+    padding: 10px 0;
 }
 
 .header-comentario:hover{
@@ -29,11 +31,14 @@ body{
 
 .añadirComentario{
     background: #99A799;
+    display: flex;
+    flex-wrap: wrap;
     margin: auto;
     width: 50%;
     margin-bottom: 5%;
     padding: 5px;
     border: 1px solid black;
+
 }
 
 .header-comentario h2{
@@ -50,9 +55,10 @@ body{
 
 .header-formulario{
     background-color: #99A799;
-    display: flex;
+    width: 100%;
     align-items: center;
     font-size: xx-large;
+    padding: 10px 0;
 
 }
 
