@@ -1,5 +1,5 @@
 <?php
-    include_once "../../data/clases/libros.php";
+    include_once "../../clases/libros.php";
 
     $libro = new libroClass();
 
