@@ -60,19 +60,6 @@
                     </div>
                 </div>';
             }
-
-            /*
-            foreach ($listaLibros as $libro) {
-                echo '<div class="libro">
-                <img src="../public/portadas/libro' . $libro['id'] . '.webp" alt="Portada del libro" class="book-cover">
-                
-                <h3 class="title">' . $libro['titulo'] . '</h3>
-                <p class="author">' . $libro['autor'] . '</p>
-                <p class="description">' . $libro['descripcion'] . '</p>
-                <input type="button" value="Comprar" class="comprarLibro" id="' . $libro['id'] .'" ></input>
-                <p class="price">' . $libro['precio'] . ' $</p></div>';
-            }
-            */
             ?>
         </div>
     </div>
