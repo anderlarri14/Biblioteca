@@ -11,7 +11,8 @@
 
         <div id="links">
             <a href="../home" class="link">INICIO</a>
-            <a href="" class="link">CATALOGO</a>
+            <a href="../catalogo" class="link">CATALOGO</a>
+            <a href="" class="link">COMPRAR</a>
             <a href="" class="link">COMENTARIOS</a>
             <a href="../profile" class="link link-perfil">PERFIL</a>
         </div>
