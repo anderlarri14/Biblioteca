@@ -2,7 +2,7 @@ function verify(){
     var nombre = document.getElementById("nombre").value
     var comentario = document.getElementById("comentario").value
     var send = false
-    
+
     if(nombre == ""){
         alert("No has introducido tu nombre.")
     }

@@ -1,5 +1,5 @@
 <?php
-    $comentarios = simplexml_load_file("../data/comments.xml");
+    $comentarios = simplexml_load_file("../../data/comments/comments.xml");
 
     $comentario = $comentarios->addChild('comentario');
 
@@ -11,7 +11,7 @@
     $comentario->addChild('nombre', $_POST['nombre']);
     $comentario->addChild('texto',$_POST['comentario']);
     
-    $comentarios->asXML('../data/comments.xml');
+    $comentarios->asXML('../../data/comments/comments.xml');
 
     header('Location: listComentarios.php');
 
