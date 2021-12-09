@@ -1,7 +1,7 @@
 
 <footer>
     <div class="logo-wrap">
-        <a href="index.html">
+        <a href="../home/">
             <img src="../../public/footer-logo.webp" alt="Logo Libreria" id="footer-logo">
             <h1>Libreria Cervantes</h1>
         </a>
