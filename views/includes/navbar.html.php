@@ -35,7 +35,9 @@
             </div>
             <img alt="Imagen de perfil del usuario en navegador" src="../../public/profile.webp">
             <p id="navNombreUsuario"><?php
-                session_start();
+                if(!isset($_SESSION["usuario"])){
+                    session_start();
+                }
                 if(isset($_SESSION["usuario"])){
                     echo $_SESSION["usuario"];
                 }

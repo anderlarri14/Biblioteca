@@ -37,6 +37,10 @@ h2{
 
 .title{
     font-size: x-large;
+    position:absolute;
+    left:23.7%;
+    top:15px;
+
 }
 
 .author{
