@@ -266,10 +266,8 @@ nav>a>p{
     background-color:#7f9f94;
 }
 
-
-
-
 h2,footer a, footer p,i,li{
     color: white;
+    margin-bottom: 10px;
 }
 

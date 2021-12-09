@@ -1,16 +1,12 @@
-
-
-
-
-
    <nav>
-       <a href="index.html">
+       <a href="../home">
             <img src="../../public/header-logo.webp" alt="Logo Libreria" id="header-logo"/>
             <p>Libreria Cervantes</p>
         </a>
 
         <div id="links">
             <a href="../home" class="link">INICIO</a>
+
             <a href="../catalogo" class="link">CATALOGO</a>
             <a href="" class="link">COMPRAR</a>
             <a href="" class="link">COMENTARIOS</a>
